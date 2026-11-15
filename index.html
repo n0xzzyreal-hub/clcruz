@@ -4,137 +4,43 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CL Cruz Serralheria. Basta acreditar.</title>
-<meta name="description" content="Catálogo da CL Cruz Serralheria com os anúncios atualizados do Mercado Livre.">
+<meta name="description" content="CL Cruz Serralheria. Nossos produtos estão no Mercado Livre.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#0F1C2E;--bg:#F3F5F8;--card:#fff;--line:#E2E6EC;--mut:#5A6679;--ac:#2250F4;--ac2:#1A3FC4;--warn:#B45309}
+:root{--ink:#0F1C2E;--mut:#A9B6CB}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "Plus Jakarta Sans",system-ui,sans-serif}
-:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
-.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
-.demo{background:#FEF3C7;color:#78350F;text-align:center;font-size:14px;padding:8px 16px}
-.hero{background:var(--ink);color:#fff;padding-bottom:84px}
-.brand{display:flex;align-items:center;gap:10px;padding:18px 0;font-weight:800;letter-spacing:-.01em}
+body{margin:0;background:var(--ink);color:#fff;font:400 16px/1.5 "Plus Jakarta Sans",system-ui,sans-serif}
+.pagina{min-height:100vh;min-height:100svh;display:grid;grid-template-rows:auto 1fr auto;max-width:1240px;margin:0 auto;padding:0 24px}
+.brand{display:flex;align-items:center;gap:10px;padding:20px 0;font-weight:800}
 .mono{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:#fff;color:var(--ink);font-size:14px}
-.hero h1{margin:44px 0 0;text-align:center;font-size:clamp(3rem,9vw,6.2rem);line-height:.95;letter-spacing:-.05em;font-weight:800}
-.hero p{margin:18px auto 0;max-width:520px;text-align:center;color:#A9B6CB;font-size:17px}
-.busca-w{position:sticky;top:12px;z-index:20;margin-top:-30px;padding:0 0 4px}
-.busca{display:flex;align-items:center;gap:8px;max-width:680px;margin:0 auto;height:60px;background:#fff;border-radius:16px;padding:6px 6px 6px 18px;box-shadow:0 12px 32px rgba(15,28,46,.2)}
-.busca svg{flex:none;color:var(--mut)}
-.busca input{flex:1;min-width:0;border:0;background:none;font:inherit;font-size:17px;padding:8px 4px;color:var(--ink)}
-.busca input:focus-visible{outline:none}
-.busca:focus-within{box-shadow:0 12px 32px rgba(15,28,46,.2),0 0 0 3px var(--ac)}
-.busca button{height:100%;border:0;border-radius:11px;background:var(--ac);color:#fff;font:inherit;font-weight:600;padding:0 24px;cursor:pointer}
-.busca button:hover{background:var(--ac2)}
-.cats{display:flex;gap:8px;overflow-x:auto;padding:22px 0 6px;scrollbar-width:none}
-.cats::-webkit-scrollbar{display:none}
-.chip{flex:none;display:flex;gap:8px;align-items:center;border:1px solid var(--line);background:#fff;color:var(--ink);font:inherit;font-weight:500;font-size:14px;padding:8px 16px;border-radius:999px;cursor:pointer}
-.chip .n{color:var(--mut);font-weight:400}
-.chip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
-.chip[aria-pressed=true] .n{color:#A9B6CB}
-.meta{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:18px 0 14px}
-.meta p{margin:0;font-weight:600}
-select{font:inherit;font-size:14px;border:1px solid var(--line);border-radius:10px;padding:8px 12px;background:#fff;color:var(--ink)}
-#grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
-.card{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
-.card:hover{border-color:#B8C2D2}
-.foto{display:block;aspect-ratio:1;background:#F1F3F6}
-.foto img{display:block;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
-.tag{position:absolute;top:12px;left:12px;background:#fff;border-radius:6px;font-size:12px;font-weight:600;padding:3px 9px;color:var(--mut);box-shadow:0 1px 3px rgba(15,28,46,.12)}
-.tag.warn{color:var(--warn)}
-.corpo{display:flex;flex-direction:column;flex:1;padding:16px}
-.corpo h3{margin:0 0 10px;font-size:15px;font-weight:500;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.8em}
-.corpo h3 a{text-decoration:none;color:inherit}
-.preco{display:flex;align-items:flex-start;gap:3px;margin:0 0 16px;font-weight:800;letter-spacing:-.03em}
-.preco .rs{font-size:15px;margin-top:5px;font-weight:600}
-.preco .int{font-size:30px;line-height:1.1}
-.preco .cts{font-size:15px;margin-top:5px}
-.btn{display:block;margin-top:auto;text-align:center;text-decoration:none;border:0;background:var(--ac);color:#fff;font:inherit;font-weight:600;font-size:14px;padding:12px;border-radius:10px;cursor:pointer}
-.btn:hover{background:var(--ac2)}
-.sk{border-radius:18px;background:#fff;border:1px solid var(--line);padding:0;overflow:hidden}
-.sk i{display:block;background:#E9ECF1}.sk .a{aspect-ratio:1}.sk .b{height:12px;margin:16px 16px 0;border-radius:6px}.sk .c{height:12px;width:50%;margin:10px 16px 18px;border-radius:6px}
-.aviso{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:64px 16px;background:#fff;border:1px dashed #C9D1DE;border-radius:18px}
-.aviso .ic{display:grid;place-items:center;width:56px;height:56px;border-radius:16px;background:var(--bg);color:var(--mut);margin-bottom:16px}
-.aviso h2{margin:0 0 6px;font-size:20px}.aviso p{margin:0 0 18px;max-width:440px;color:var(--mut)}
-.aviso .btn{display:inline-block;padding:12px 28px}
-#mais{display:block;width:auto;margin:32px auto 0;background:#fff;color:var(--ink);border:1px solid var(--line);padding:12px 32px}
-#mais:hover{background:#fff;border-color:var(--ink)}
-footer{margin-top:72px;background:var(--ink);color:#A9B6CB;padding:36px 0;font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
-footer b{color:#fff;font-size:16px}
-@media(max-width:560px){.wrap{padding:0 14px}#grade{grid-template-columns:repeat(2,1fr);gap:10px}.corpo{padding:12px}.preco .int{font-size:24px}.hero{padding-bottom:70px}.hero h1{margin-top:28px}.busca{height:54px}.busca button{padding:0 16px}.card{border-radius:14px}}
+.centro{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px 0 48px}
+h1{margin:0;font-size:clamp(3rem,10vw,7rem);line-height:.95;letter-spacing:-.05em;font-weight:800}
+.centro p{margin:20px 0 36px;color:var(--mut);font-size:18px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--ink);text-decoration:none;font-weight:600;font-size:17px;padding:16px 32px;border-radius:14px}
+.btn:hover{background:#E6EBF3}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+footer{padding:20px 0;color:var(--mut);font-size:14px;text-align:center}
+@media(max-width:560px){.pagina{padding:0 16px}.btn{width:100%;justify-content:center}}
 </style>
 </head>
 <body>
-<div class="demo" id="demo" hidden>Pré-visualização do layout. Os produtos abaixo são apenas exemplos e não existem no Mercado Livre.</div>
-<section class="hero">
-  <div class="wrap">
-    <div class="brand"><span class="mono" aria-hidden="true">CL</span>CL Cruz Serralheria</div>
+<div class="pagina">
+  <div class="brand"><span class="mono" aria-hidden="true">CL</span>CL Cruz Serralheria</div>
+  <main class="centro">
     <h1>Basta acreditar.</h1>
-    <p>Nossos produtos do Mercado Livre em um só lugar, com fotos e preços sempre atualizados.</p>
-  </div>
-</section>
-<main class="wrap">
-  <div class="busca-w"><form class="busca" role="search" id="form">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-    <input id="q" type="search" placeholder="O que você procura?" aria-label="Buscar produtos" autocomplete="off">
-    <button type="submit">Buscar</button></form></div>
-  <nav class="cats" id="cats" aria-label="Categorias"></nav>
-  <div class="meta"><p id="cont" aria-live="polite"></p>
-    <select id="ord" aria-label="Ordenar produtos"><option value="rel">Mais relevantes</option><option value="asc">Menor preço</option><option value="desc">Maior preço</option></select></div>
-  <div id="grade"></div>
-  <button class="btn" id="mais" hidden>Ver mais produtos</button>
-  <noscript><p>Ative o JavaScript para ver o catálogo.</p></noscript>
-</main>
-<footer><div class="wrap"><div><b>CL Cruz Serralheria</b><br>Basta acreditar.</div><div>Venda e entrega pelo Mercado Livre.</div></div></footer>
+    <p>Nossos produtos estão no Mercado Livre.</p>
+    <a class="btn" id="loja" href="#">Ver loja no Mercado Livre
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+  </main>
+  <footer>Venda e entrega pelo Mercado Livre.</footer>
+</div>
 <script>
-const $=s=>document.querySelector(s);
-const demo=new URLSearchParams(location.search).has("demo");
-const nf=new Intl.NumberFormat("pt-BR");
-const norm=s=>s.normalize("NFD").replace(/\p{M}/gu,"").toLowerCase();
-const S={todos:[],cats:[],cat:"",q:"",ord:"rel",n:24};
-const IC_BOX='<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg>';
-function el(t,a,...k){const e=document.createElement(t);for(const[x,v]of Object.entries(a||{}))x in e?e[x]=v:e.setAttribute(x,v);e.append(...k);return e}
-function msg(titulo,t,retry){const ic=el("div",{class:"ic"});ic.innerHTML=IC_BOX;
-  $("#grade").replaceChildren(el("div",{class:"aviso",role:"status"},ic,el("h2",{},titulo),el("p",{},t),...(retry?[el("button",{class:"btn",onclick:carregar},"Tentar de novo")]:[])));
-  $("#cont").textContent="";$("#mais").hidden=true}
-const ext={target:"_blank",rel:"noopener noreferrer"};
-function preco(v){const[i,c]=v.toFixed(2).split(".");return el("p",{class:"preco"},el("span",{class:"rs"},"R$"),el("span",{class:"int"},nf.format(Number(i))),el("span",{class:"cts"},c))}
-function card(p){const tags=[];
-  if(p.condicao==="used")tags.push(el("span",{class:"tag"},"Usado"));
-  else if(p.estoque>0&&p.estoque<=3)tags.push(el("span",{class:"tag warn"},"Últimas unidades"));
-  return el("article",{class:"card"},...tags,
-    el("a",{...ext,href:p.link,class:"foto",tabindex:-1,"aria-hidden":"true"},el("img",{src:p.foto,alt:"",loading:"lazy",width:300,height:300})),
-    el("div",{class:"corpo"},el("h3",{},el("a",{...ext,href:p.link},p.titulo)),preco(p.preco),
-      el("a",{...ext,href:p.link,class:"btn"},"Comprar no Mercado Livre")))}
-function lista(){let l=S.todos.filter(p=>(!S.cat||p.categoria===S.cat)&&(!S.q||norm(p.titulo).includes(norm(S.q))));
-  if(S.ord==="asc")l=[...l].sort((a,b)=>a.preco-b.preco);if(S.ord==="desc")l=[...l].sort((a,b)=>b.preco-a.preco);return l}
-function render(){const l=lista();
-  if(!l.length)return S.todos.length?msg("Nenhum produto encontrado","Tente outra palavra ou escolha outra categoria."):msg("Sem anúncios ativos","A loja não tem anúncios ativos para exibir agora.");
-  $("#grade").replaceChildren(...l.slice(0,S.n).map(card));
-  $("#cont").textContent=l.length===1?"1 produto":l.length+" produtos";$("#mais").hidden=l.length<=S.n}
-function chips(){$("#cats").replaceChildren(...[{id:"",nome:"Todas",total:S.todos.length},...S.cats].map(x=>
-  el("button",{class:"chip","aria-pressed":String(S.cat===x.id),onclick(){S.cat=x.id;S.n=24;chips();render()}},x.nome,el("span",{class:"n"},String(x.total)))))}
-const ph=i=>"data:image/svg+xml,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><rect width="300" height="300" fill="hsl(${i*47%360} 18% 92%)"/><rect x="95" y="95" width="110" height="110" rx="18" fill="hsl(${i*47%360} 22% 80%)"/></svg>`);
-function amostra(){const cs=[["c1","Categoria A"],["c2","Categoria B"],["c3","Categoria C"]];
-  return{produtos:[39.9,129.9,89,249.5,19.99,64.9,349,24.5,159.9,54.9,98,12.9].map((p,i)=>({titulo:"Produto de exemplo "+String(i+1).padStart(2,"0"),preco:p,foto:ph(i),link:"#",categoria:cs[i%3][0],estoque:i%5===0?2:10,condicao:i%7===3?"used":"new"})),
-    categorias:cs.map(([id,nome])=>({id,nome,total:4}))}}
-async function carregar(){
-  $("#grade").replaceChildren(...Array.from({length:8},()=>el("div",{class:"sk"},el("i",{class:"a"}),el("i",{class:"b"}),el("i",{class:"c"}))));
-  $("#cont").textContent="Carregando produtos";$("#mais").hidden=true;
-  try{let j;if(demo)j=amostra();else{const r=await fetch("/api/catalogo");j=await r.json().catch(()=>({}));if(!r.ok)throw j}
-    S.todos=j.produtos;S.cats=j.categorias;chips();render()}
-  catch(e){if(e&&e.erro==="nao_conectado")msg("Catálogo aguardando conexão","A loja ainda não foi conectada ao Mercado Livre. Quem administra o site precisa concluir a conexão (veja o README).");
-    else msg("Não foi possível carregar os produtos","Verifique sua conexão e tente de novo em instantes.",true)}
-}
-if(demo){$("#demo").hidden=false;document.addEventListener("click",e=>{if(e.target.closest("a[href='#']"))e.preventDefault()})}
-$("#form").onsubmit=e=>e.preventDefault();
-$("#q").oninput=e=>{S.q=e.target.value.trim();S.n=24;render()};
-$("#ord").onchange=e=>{S.ord=e.target.value;render()};
-$("#mais").onclick=()=>{S.n+=24;render()};
-carregar();
+// Cole entre as aspas o link da loja no Mercado Livre.
+const LOJA="https://lista.mercadolivre.com.br/_CustId_9683052";
+const a=document.getElementById("loja");
+if(LOJA){a.href=LOJA;a.target="_blank";a.rel="noopener noreferrer"}else a.onclick=e=>e.preventDefault();
 </script>
 </body>
 </html>
